@@ -1,0 +1,26 @@
+#sudo bash zshell.txt
+
+sudo apt update
+sudo apt upgrade
+
+sudo apt install zsh
+chsh -s $(which zsh)
+
+sudo apt install curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+cd ~/.oh-my-zsh/custom/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+sudo nano ~/.zshrc
+
+#plugins = (
+#    git
+#    zsh-syntax-highlighting
+#    zsh-autosuggestions
+#    web-search
+#    copyfile
+#    dirhistory
+#    history
+#)
